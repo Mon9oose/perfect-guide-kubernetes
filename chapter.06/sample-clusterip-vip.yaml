@@ -4,6 +4,7 @@ metadata:
   name: sample-clusterip
 spec:
   type: ClusterIP
+  clusterIP: 10.102.4.3
   selector:
     app: sample-app
   ports:

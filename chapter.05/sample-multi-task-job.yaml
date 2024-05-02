@@ -1,12 +1,11 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: sample-job-ttl
+  name: sample-multi-task-job
 spec:
-  ttlSecondsAfterFinished: 30
-  completions: 1
-  parallelism: 1
-  backoffLimit: 10
+  completions: 5
+  parallelism: 3
+  backoffLimit: 5
   template:
     spec:
       containers:
